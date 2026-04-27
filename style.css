@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:#f1f5f9;color:#1e293b;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:#1e293b;color:#fff;padding:12px 16px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.header-inner{max-width:640px;margin:0 auto}
+.header h1{font-size:1.15rem;font-weight:700}
+.header h1 span{color:#93c5fd;font-size:.8rem;font-weight:400;margin-left:8px}
+.header p{font-size:.7rem;color:#94a3b8;margin-top:2px}
+
+/* Day nav pills */
+.day-nav{position:sticky;top:50px;z-index:40;background:rgba(241,245,249,.95);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0;padding:8px 12px;overflow-x:auto;display:flex;gap:6px;scrollbar-width:none}
+.day-nav::-webkit-scrollbar{display:none}
+.day-pill{flex-shrink:0;padding:6px 14px;border-radius:20px;font-size:.75rem;font-weight:600;border:1px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer;transition:all .2s}
+.day-pill:hover{border-color:#93c5fd;color:#3b82f6}
+.day-pill.active{background:#3b82f6;color:#fff;border-color:#3b82f6}
+
+/* Main */
+.main{max-width:640px;margin:0 auto;padding:0 12px 40px}
+
+/* Day section */
+.day-header{position:sticky;top:88px;z-index:30;background:rgba(241,245,249,.95);backdrop-filter:blur(8px);padding:10px 12px;margin-top:20px;border-radius:10px 10px 0 0;border-bottom:2px solid #e2e8f0}
+.day-header .day-date{font-size:.95rem;font-weight:700;color:#1e293b}
+.day-header .day-theme{font-size:.75rem;color:#64748b;margin-top:2px}
+.day-header .day-tags{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:.65rem;font-weight:600}
+.tag-vienna{background:#dbeafe;color:#1d4ed8}
+.tag-amsterdam{background:#fce7f3;color:#be185d}
+.tag-hague{background:#fef3c7;color:#92400e}
+.tag-budapest{background:#d1fae5;color:#065f46}
+.tag-chengdu{background:#fee2e2;color:#991b1b}
+.tag-stay{background:#f3e8ff;color:#6b21a8}
+
+/* Itinerary card */
+.it-card{display:flex;border-radius:10px;border:1px solid #e2e8f0;overflow:hidden;background:#fff;margin-top:8px;transition:box-shadow .2s}
+.it-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.it-bar{width:5px;flex-shrink:0}
+.bar-flight{background:#3b82f6}
+.bar-museum{background:#8b5cf6}
+.bar-shopping{background:#ec4899}
+.bar-concert{background:#ef4444}
+.bar-transport{background:#14b8a6}
+.bar-food{background:#f59e0b}
+.bar-hotel{background:#6366f1}
+.bar-sight{background:#10b981}
+.bar-free{background:#94a3b8}
+.it-body{flex:1;padding:10px 12px;min-width:0}
+.it-time{font-size:.75rem;font-weight:700;color:#3b82f6}
+.it-event{font-size:.88rem;font-weight:600;color:#1e293b;margin-top:2px}
+.it-loc{font-size:.75rem;color:#64748b;margin-top:2px;display:flex;align-items:center;gap:4px}
+.it-note{font-size:.72rem;color:#94a3b8;margin-top:4px;font-style:italic;padding:4px 8px;background:#f8fafc;border-radius:6px;border:1px dashed #e2e8f0}
+
+/* Art card (special) */
+.art-section{margin-top:16px}
+.art-section h3{font-size:.85rem;font-weight:700;color:#7c3aed;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.art-item{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:#faf5ff;border:1px solid #e9d5ff;border-radius:10px;margin-bottom:6px}
+.art-num{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#7c3aed,#a78bfa);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0}
+.art-info{flex:1;min-width:0}
+.art-game{font-size:.68rem;color:#7c3aed;font-weight:600}
+.art-real{font-size:.85rem;font-weight:600;color:#1e293b}
+.art-artist{font-size:.72rem;color:#64748b}
+.art-museum{font-size:.7rem;color:#6d28d9;margin-top:2px}
+.art-status{padding:3px 8px;border-radius:6px;font-size:.65rem;font-weight:700;background:#d1fae5;color:#065f46;white-space:nowrap;flex-shrink:0;align-self:center}
+
+/* Info box */
+.info-box{margin-top:12px;padding:12px;border-radius:10px;font-size:.78rem;line-height:1.5}
+.info-box.warn{background:#fef3c7;border:1px solid #fde68a;color:#92400e}
+.info-box.tip{background:#dbeafe;border:1px solid #bfdbfe;color:#1e40af}
+.info-box strong{font-weight:700}
+
+/* Detail rows inside card */
+.detail-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #f1f5f9;font-size:.78rem}
+.detail-row:last-child{border-bottom:none}
+.detail-row .dl{color:#64748b}
+.detail-row .dv{font-weight:600;color:#1e293b;text-align:right;max-width:60%}
+
+/* Le Labo special */
+.lelabo-card{background:linear-gradient(135deg,#fdf2f8,#fce7f3);border:1px solid #fbcfe8}
+
+/* Concert special */
+.concert-card{background:linear-gradient(135deg,#fef2f2,#fee2e2);border:1px solid #fecaca}
+
+/* Summary stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+.stat{text-align:center;padding:12px 8px;background:#fff;border-radius:10px;border:1px solid #e2e8f0}
+.stat-n{font-size:1.5rem;font-weight:800;color:#3b82f6}
+.stat-l{font-size:.65rem;color:#64748b;margin-top:2px}
+
+/* Footer */
+.footer{text-align:center;padding:24px 16px;font-size:.72rem;color:#94a3b8;border-top:1px solid #e2e8f0;max-width:640px;margin:0 auto}
+
+/* Divider */
+.divider{height:1px;background:#e2e8f0;margin:16px 0}
