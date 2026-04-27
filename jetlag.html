@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>倒时差攻略 - Euro Trip 2026</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .jetlag-card { background: var(--card-bg); border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px var(--card-shadow); border-left: 4px solid var(--link-color); }
+  .jetlag-card h2 { font-size: 1.1rem; margin-bottom: 8px; color: var(--text-main); display: flex; align-items: center; gap: 6px; }
+  .jetlag-card p { font-size: .95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
+  .jetlag-card ul { padding-left: 20px; font-size: .95rem; color: var(--text-muted); }
+  .jetlag-card li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-titles">
+      <h1>⏰ 科学倒时差攻略</h1>
+      <p>亚洲飞欧洲，如何满血复活 ✨</p>
+    </div>
+    <button id="themeToggle" class="theme-btn" aria-label="切换深色模式">🌙</button>
+  </div>
+</header>
+
+<div class="top-nav-links" style="display:flex; gap:10px; padding:12px 16px; overflow-x:auto;">
+  <a href="index.html" class="nav-btn">🗺️ 行程安排</a>
+  <a href="packing.html" class="nav-btn">🎒 行李清单</a>
+  <a href="jetlag.html" class="nav-btn" style="background:var(--link-color); color:#fff; border-color:var(--link-color);">⏰ 倒时差攻略</a>
+</div>
+
+<main class="main">
+  <div class="jetlag-card">
+    <h2>✈️ 飞机上：强行切换生物钟</h2>
+    <p>欧洲比国内慢 6 小时。从成都起飞后，请把手表/手机立刻调成维也纳时间。在飞机飞行的后半段（对应维也纳的深夜），无论如何都要带上眼罩和降噪耳机强行睡觉！</p>
+  </div>
+
+  <div class="jetlag-card">
+    <h2>🌞 Day 1 (4月30日)：最难熬的白昼</h2>
+    <p>您将在早晨 08:00 抵达维也纳。这是倒时差最关键的一天！</p>
+    <ul>
+      <li><strong>绝不午睡</strong>：哪怕下午困得眼皮打架（此时是国内深夜），也绝对不能回酒店睡觉！一旦睡着，整个欧洲行程的时差就彻底崩了。</li>
+      <li><strong>咖啡续命</strong>：这正是为什么安排您中午去 Gota Coffee！用最高质量的精品咖啡强行续命。</li>
+      <li><strong>晒太阳</strong>：多在户外走动，阳光能抑制褪黑素分泌，欺骗身体“现在是白天”。</li>
+    </ul>
+  </div>
+
+  <div class="jetlag-card">
+    <h2>🌙 第一晚入睡：借助褪黑素</h2>
+    <p>晚上 20:00 左右，您可以吃完晚饭回酒店。此时可以吃一颗 3mg-5mg 的褪黑素（Melatonin），强制在当地时间 21:00 左右入睡，一觉睡到第二天早晨。</p>
+  </div>
+
+  <div class="jetlag-card">
+    <h2>🏃 晨跑：重置时钟的终极杀器</h2>
+    <p>我们在 Day 3、Day 4 和 Day 5 都为您安排了备选晨跑计划。早起沐浴清晨的阳光，并进行 30-40 分钟的有氧运动，能极其有效地让身体意识到“这是新的一天”，从而快速把生物钟锁定在欧洲频道。</p>
+  </div>
+</main>
+
+<footer class="footer">
+  熬过第一天，迎接美好的欧洲假期！✨
+</footer>
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('euro_theme');
+  if(savedTheme==='dark' || (!savedTheme && prefersDark)) {
+    document.body.classList.add('dark');
+  }
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('euro_theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  });
+</script>
+</body>
+</html>

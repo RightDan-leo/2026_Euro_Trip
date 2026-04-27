@@ -11,14 +11,25 @@
 
 <header class="header">
   <div class="header-inner">
-    <h1>🇪🇺 欧洲艺术之旅手册 <span>2026.4.30 — 5.5</span></h1>
-    <p>成都 → 维也纳 → 阿姆斯特丹 → 布达佩斯 → 维也纳 → 成都 ｜ 6天5夜</p>
+    <div class="header-titles">
+      <h1>🇪🇺 欧洲艺术之旅手册 <span>2026.4.30 — 5.5</span></h1>
+      <p>成都 → 维也纳 → 阿姆斯特丹 → 布达佩斯 → 维也纳 → 成都 ｜ 6天5夜</p>
+    </div>
+    <button id="themeToggle" class="theme-btn" aria-label="切换深色模式">🌙</button>
   </div>
 </header>
 
+<div class="top-nav-links" style="display:flex; gap:10px; padding:12px 16px; overflow-x:auto;">
+  <a href="index.html" class="nav-btn" style="background:var(--link-color); color:#fff; border-color:var(--link-color);">🗺️ 行程安排</a>
+  <a href="packing.html" class="nav-btn">🎒 行李清单</a>
+  <a href="jetlag.html" class="nav-btn">⏰ 倒时差攻略</a>
+</div>
+
 <nav class="day-nav" id="dayNav"></nav>
 
-<main class="main" id="main"></main>
+<main class="main" id="main">
+  <section id="todoSection" class="todo-container"></section>
+</main>
 
 <footer class="footer">
   🎨 6 幅动森名画 · 🧴 1 款城市限定香水 · 🎸 1 场传奇演唱会<br>祝旅途愉快 ✨
