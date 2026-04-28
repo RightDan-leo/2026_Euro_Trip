@@ -252,4 +252,47 @@ function initTheme() {
   });
 }
 
+function initMap() {
+  const mapElement = document.getElementById('map');
+  if (!mapElement) return;
+
+  const map = L.map('map').setView([49.5, 12.0], 5);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const pins = [
+    // Vienna
+    { name: "✈️ 维也纳 VIE 机场", coords: [48.1103, 16.5697] },
+    { name: "🚆 维也纳中央车站 (Hauptbahnhof)", coords: [48.1851, 16.3766] },
+    { name: "🎨 艺术史博物馆", coords: [48.2038, 16.3618] },
+    { name: "🏰 美泉宫", coords: [48.1848, 16.3122] },
+    
+    // Amsterdam & The Hague
+    { name: "✈️ 阿姆斯特丹 Schiphol 机场", coords: [52.3105, 4.7683] },
+    { name: "🚆 阿姆斯特丹中央车站", coords: [52.3791, 4.9003] },
+    { name: "🎨 Rijksmuseum", coords: [52.3599, 4.8852] },
+    { name: "🎨 Van Gogh Museum", coords: [52.3584, 4.8810] },
+    { name: "🧴 Le Labo 九条街", coords: [52.3725, 4.8829] },
+    { name: "🎨 Mauritshuis (海牙)", coords: [52.0804, 4.3143] },
+    
+    // Budapest
+    { name: "✈️ 布达佩斯 BUD 机场", coords: [47.4369, 19.2556] },
+    { name: "🚆 布达佩斯 Keleti 火车站", coords: [47.5004, 19.0830] },
+    { name: "🎸 MVM Dome 演唱会馆", coords: [47.4729, 19.1026] },
+    { name: "♨️ 塞切尼温泉", coords: [47.5186, 19.0823] },
+    { name: "🏰 布达城堡 / 渔人堡", coords: [47.4962, 19.0396] }
+  ];
+
+  const markers = [];
+  pins.forEach(pin => {
+    const marker = L.marker(pin.coords).addTo(map).bindPopup(`<b>${pin.name}</b>`);
+    markers.push(marker);
+  });
+
+  const group = new L.featureGroup(markers);
+  map.fitBounds(group.getBounds(), { padding: [20, 20] });
+}
+
 init();
+initMap();

@@ -6,6 +6,8 @@
 <title>2026 欧洲行程手册</title>
 <meta name="description" content="2026年4月30日-5月5日 维也纳·阿姆斯特丹·海牙·布达佩斯">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 
@@ -23,6 +25,11 @@
   <a href="index.html" class="nav-btn" style="background:var(--link-color); color:#fff; border-color:var(--link-color);">🗺️ 行程安排</a>
   <a href="packing.html" class="nav-btn">🎒 行李清单</a>
   <a href="jetlag.html" class="nav-btn">⏰ 倒时差攻略</a>
+</div>
+
+<div class="map-wrapper" style="max-width:640px; margin: 0 auto; padding: 0 12px;">
+  <div id="map" style="height: 350px; border-radius: 12px; z-index: 1;"></div>
+  <div class="map-hint" style="font-size: 0.75rem; color: var(--text-color); margin-top: 8px; text-align: center;">💡 点击地图图标查看详细地址及备注</div>
 </div>
 
 <nav class="day-nav" id="dayNav"></nav>
