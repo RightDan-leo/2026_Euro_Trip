@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>当地语言生存指南</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .lang-section { margin-bottom: 30px; background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px var(--shadow-color); border: 1px solid var(--border-color); }
+  .lang-header { padding: 15px 20px; font-weight: 700; font-size: 1.1rem; color: #fff; }
+  .lang-de { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+  .lang-nl { background: linear-gradient(135deg, #f2994a, #f2c94c); color: #333; }
+  .lang-hu { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+  .phrase-item { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; border-bottom: 1px solid var(--border-color); }
+  .phrase-item:last-child { border-bottom: none; }
+  .phrase-cn { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 4px; }
+  .phrase-local { font-size: 1.1rem; font-weight: 600; color: var(--text-color); }
+  .play-btn { background: var(--link-color); color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; transition: transform 0.1s; }
+  .play-btn:active { transform: scale(0.9); }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-titles">
+      <h1>🗣️ 生存语言指南</h1>
+      <p>德语 · 荷兰语 · 匈牙利语 | 点击喇叭发音</p>
+    </div>
+    <button id="themeToggle" class="theme-btn" aria-label="切换深色模式">🌙</button>
+  </div>
+</header>
+
+<div class="top-nav-links" style="display:flex; gap:10px; padding:12px 16px; overflow-x:auto;">
+  <a href="index.html" class="nav-btn">🗺️ 行程安排</a>
+  <a href="packing.html" class="nav-btn">🎒 行李清单</a>
+  <a href="jetlag.html" class="nav-btn">⏰ 倒时差攻略</a>
+  <a href="language.html" class="nav-btn" style="background:var(--link-color); color:#fff; border-color:var(--link-color);">🗣️ 语言发音</a>
+</div>
+
+<main class="main" style="padding-top: 10px;">
+  <div class="info-box warn" style="margin-bottom: 20px;">
+    💡 提示：发音功能调用手机自带的语音引擎。欧洲人的英语普及率极高，说英语完全可以走天下，但这几句当地话能让你获得更好的服务态度！
+  </div>
+
+  <div class="lang-section">
+    <div class="lang-header lang-de">🇦🇹 维也纳 (德语)</div>
+    <div class="phrases-container" data-lang="de-DE">
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">你好 (正式/通用)</div>
+          <div class="phrase-local">Grüß Gott / Hallo</div>
+        </div>
+        <button class="play-btn" data-text="Grüß Gott">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">谢谢</div>
+          <div class="phrase-local">Danke</div>
+        </div>
+        <button class="play-btn" data-text="Danke">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">请 / 不客气</div>
+          <div class="phrase-local">Bitte</div>
+        </div>
+        <button class="play-btn" data-text="Bitte">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">买单，谢谢 (结账)</div>
+          <div class="phrase-local">Zahlen, bitte</div>
+        </div>
+        <button class="play-btn" data-text="Zahlen, bitte">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">你讲英文吗？</div>
+          <div class="phrase-local">Sprechen Sie Englisch?</div>
+        </div>
+        <button class="play-btn" data-text="Sprechen Sie Englisch?">🔊</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lang-section">
+    <div class="lang-header lang-nl">🇳🇱 阿姆斯特丹 (荷兰语)</div>
+    <div class="phrases-container" data-lang="nl-NL">
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">你好</div>
+          <div class="phrase-local">Hallo / Hoi</div>
+        </div>
+        <button class="play-btn" data-text="Hallo">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">谢谢 (非常感谢)</div>
+          <div class="phrase-local">Dank je wel</div>
+        </div>
+        <button class="play-btn" data-text="Dank je wel">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">请</div>
+          <div class="phrase-local">Alstublieft</div>
+        </div>
+        <button class="play-btn" data-text="Alstublieft">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">好吃！(夸赞食物)</div>
+          <div class="phrase-local">Lekker</div>
+        </div>
+        <button class="play-btn" data-text="Lekker">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">买单</div>
+          <div class="phrase-local">Mag ik de rekening?</div>
+        </div>
+        <button class="play-btn" data-text="Mag ik de rekening?">🔊</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lang-section">
+    <div class="lang-header lang-hu">🇭🇺 布达佩斯 (匈牙利语)</div>
+    <div class="phrases-container" data-lang="hu-HU">
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">你好 (非正式/同辈)</div>
+          <div class="phrase-local">Szia</div>
+        </div>
+        <button class="play-btn" data-text="Szia">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">您好 (白天正式)</div>
+          <div class="phrase-local">Jó napot</div>
+        </div>
+        <button class="play-btn" data-text="Jó napot">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">谢谢</div>
+          <div class="phrase-local">Köszönöm</div>
+        </div>
+        <button class="play-btn" data-text="Köszönöm">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">干杯！</div>
+          <div class="phrase-local">Egészségedre!</div>
+        </div>
+        <button class="play-btn" data-text="Egészségedre">🔊</button>
+      </div>
+      <div class="phrase-item">
+        <div>
+          <div class="phrase-cn">买单，谢谢</div>
+          <div class="phrase-local">A számlát kérem</div>
+        </div>
+        <button class="play-btn" data-text="A számlát kérem">🔊</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Theme toggle logic
+  const btn = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('euro_theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    if(btn) btn.textContent = '☀️';
+  }
+  if(btn) {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      if (current === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('euro_theme', 'light');
+        btn.textContent = '🌙';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('euro_theme', 'dark');
+        btn.textContent = '☀️';
+      }
+    });
+  }
+
+  // TTS logic
+  document.querySelectorAll('.play-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const text = this.getAttribute('data-text');
+      const lang = this.closest('.phrases-container').getAttribute('data-lang');
+      
+      // Prevent multiple clicks from overlapping too much
+      window.speechSynthesis.cancel(); 
+      
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = lang;
+      utterance.rate = 0.85; // slightly slower for clarity
+      
+      window.speechSynthesis.speak(utterance);
+      
+      // Visual feedback
+      const originalIcon = this.textContent;
+      this.textContent = '🎶';
+      utterance.onend = () => {
+        this.textContent = originalIcon;
+      };
+      utterance.onerror = () => {
+        this.textContent = originalIcon;
+      };
+    });
+  });
+</script>
+</body>
+</html>
